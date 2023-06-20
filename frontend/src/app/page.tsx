@@ -7,7 +7,7 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <p>
-        {data.title}
+        {data.content}
       </p>
       <GFButton>Button from chakra</GFButton>
     </main>
@@ -15,7 +15,8 @@ export default async function Home() {
 }
 
 async function getData() {
-  const res = await fetch('http://localhost:3000/message')
+  // const res = await fetch('http://localhost:3000/message')
+  const res = await fetch('http://localhost:3000/message-from-db')
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
