@@ -1,4 +1,4 @@
-import { defineStyle, extendTheme } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 import { headingTheme } from './components/Heading';
 
 const fonts = { mono: `'Menlo', monospace` };

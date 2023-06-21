@@ -48,13 +48,13 @@ export default function ChakraUi() {
       </Box>
       <VStack>
         <Container maxW="md" bg="blue.600" color="white">
-          "md" Container
+          md Container
         </Container>
         <Container maxW="550px" bg="purple.600" color="white">
-          "550px" Container
+          550px Container
         </Container>
         <Container maxW="container.sm" bg="green.400" color="#262626">
-          "container.sm" Container
+          container.sm Container
         </Container>
         <Container>Container</Container>
       </VStack>
@@ -188,7 +188,7 @@ export default function ChakraUi() {
         </Alert>
       </Stack>
       <CircularProgress value={80} />
-      <RadioGroup onChange={() => {}} value={'1'}>
+      <RadioGroup onChange={undefined} value={'1'}>
         <Stack direction="row">
           <Radio value="1">First</Radio>
           <Radio value="2">Second</Radio>

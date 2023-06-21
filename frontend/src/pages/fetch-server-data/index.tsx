@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Layout } from '@/components/Layout';
 import { Tag, Text } from '@chakra-ui/react';
-import { apiGetMessage } from '@/lib/api';
+import { GetMessageResponse, apiGetMessage } from '@/lib/api';
 
 export default function FetchServerData() {
-  const [data, setData] = useState<any | null>(null);
+  const [data, setData] = useState<GetMessageResponse | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
