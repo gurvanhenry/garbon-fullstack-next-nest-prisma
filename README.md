@@ -1,3 +1,7 @@
+# garbon-fullstack-next-nest-prisma
+
+Playground project to use fullstack TS stack (nextJS, nestJS, Prisma...)
+
 ## run frontend
 
 `cd frontend`
