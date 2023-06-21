@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <div style={{ margin: 30 }}>
         <div>
-          🏠 <Link href="/">garbonfact</Link> 🏠
+          🏠 <Link href="/">garbon</Link> 🏠
         </div>
         <div
           style={{

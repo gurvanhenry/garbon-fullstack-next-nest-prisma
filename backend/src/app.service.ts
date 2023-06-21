@@ -8,7 +8,7 @@ export class AppService {
 
   getWelcomeMessage() {
     return {
-      content: 'Wecome to garbonfact',
+      content: 'Wecome to garbon',
     };
   }
 }
