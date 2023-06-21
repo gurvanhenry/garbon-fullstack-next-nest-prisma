@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Layout } from '@/components/Layout';
+import { Tag, Text } from '@chakra-ui/react';
 
 export default function FetchServerData() {
   const [data, setData] = useState<any | null>(null);
@@ -27,13 +28,17 @@ export default function FetchServerData() {
 
   return (
     <Layout>
-      <div>Data - fetch with useEffect : classic react way</div>
-      <div>Message from server :</div>
+      <Text>Data - fetch with useEffect : classic react way</Text>
+      <Text>Message from server :</Text>
       {isLoading && <div style={{ backgroundColor: '#854' }}>Loading...</div>}
       {message ? (
-        <div style={{ backgroundColor: '#592' }}>{message}</div>
+        <Tag size="lg" colorScheme="cyan">
+          {message}
+        </Tag>
       ) : (
-        <div style={{ backgroundColor: '#CCC' }}>no data</div>
+        <Tag size="lg" colorScheme="pink">
+          no data
+        </Tag>
       )}
     </Layout>
   );

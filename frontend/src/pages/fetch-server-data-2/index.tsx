@@ -1,5 +1,6 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { Layout } from '@/components/Layout';
+import { Tag, Text } from '@chakra-ui/react';
 
 export default function FetchServerData2({
   serverData,
@@ -8,12 +9,16 @@ export default function FetchServerData2({
 
   return (
     <Layout>
-      <div>Data 2 - with next getServerSideProps</div>
-      <div>Message from server :</div>
+      <Text>Data 2 - with next getServerSideProps</Text>
+      <Text>Message from server :</Text>
       {message ? (
-        <div style={{ backgroundColor: '#A92' }}>{message}</div>
+        <Tag size="lg" bg={'#A92'}>
+          {message}
+        </Tag>
       ) : (
-        <div style={{ backgroundColor: '#CCC' }}>no data</div>
+        <Tag size="lg" colorScheme="pink">
+          no data
+        </Tag>
       )}
     </Layout>
   );

@@ -1,26 +1,24 @@
+import { Box } from '@chakra-ui/react';
 import { GLink } from './GLink';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <div style={{ margin: 30 }}>
-        <div>
-          🏠 <GLink href="/">garbon</GLink> 🏠
-        </div>
-        <div
-          style={{
-            borderColor: '#AA4436',
-            borderWidth: 1,
-            borderStyle: 'solid',
-            padding: 5,
-            marginTop: 10,
-            marginBottom: 10,
-          }}
-        >
-          {children}
-        </div>
-        <div>🍀</div>
-      </div>
-    </>
+    <Box m={30}>
+      <Box>
+        🏠 <GLink href="/">garbon</GLink> 🏠
+      </Box>
+      <Box
+        w="100%"
+        p={4}
+        mt={4}
+        mb={4}
+        borderWidth="1px"
+        borderRadius="lg"
+        borderColor="pink.500"
+      >
+        {children}
+      </Box>
+      <Box>🍀</Box>
+    </Box>
   );
 }
