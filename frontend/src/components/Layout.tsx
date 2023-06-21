@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import { GLink } from './GLink';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div style={{ margin: 30 }}>
         <div>
-          🏠 <Link href="/">garbon</Link> 🏠
+          🏠 <GLink href="/">garbon</GLink> 🏠
         </div>
         <div
           style={{

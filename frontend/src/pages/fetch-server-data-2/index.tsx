@@ -1,5 +1,5 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import Layout from '../../components/Layout';
+import { Layout } from '@/components/Layout';
 
 export default function FetchServerData2({
   serverData,

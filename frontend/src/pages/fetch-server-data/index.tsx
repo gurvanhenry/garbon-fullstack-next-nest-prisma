@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Layout from '../../components/Layout';
+import { Layout } from '@/components/Layout';
 
 export default function FetchServerData() {
   const [data, setData] = useState<any | null>(null);
