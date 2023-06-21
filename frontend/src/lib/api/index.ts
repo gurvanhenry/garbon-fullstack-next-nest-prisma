@@ -5,7 +5,8 @@ export type GetMessageResponse = {
 
 export async function apiGetMessage(): Promise<GetMessageResponse | null> {
   try {
-    const res = await fetch('http://localhost:3000/message-from-db');
+    const url = process.env.API_URL + '/message-from-db';
+    const res = await fetch(url);
     if (res.ok) {
       return res.json();
     }
