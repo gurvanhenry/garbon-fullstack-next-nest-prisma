@@ -1,23 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Layout } from '@/components/Layout';
 import { Tag, Text } from '@chakra-ui/react';
+import { apiGetMessage } from '@/lib/api';
 
 export default function FetchServerData() {
   const [data, setData] = useState<any | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const makeRequest = async () => {
-      try {
-        const res = await fetch('http://localhost:3000/message-from-db');
-        if (res.ok) {
-          return res.json();
-        }
-      } catch (error) {}
-    };
     const fetchData = async () => {
       setIsLoading(true);
-      const result = await makeRequest();
+      const result = await apiGetMessage();
       setData(result);
       setIsLoading(false);
     };

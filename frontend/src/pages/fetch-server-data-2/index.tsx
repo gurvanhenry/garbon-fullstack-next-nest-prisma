@@ -1,6 +1,7 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { Layout } from '@/components/Layout';
 import { Tag, Text } from '@chakra-ui/react';
+import { apiGetMessage } from '@/lib/api';
 
 export default function FetchServerData2({
   serverData,
@@ -32,7 +33,6 @@ type ServerData = {
 export const getServerSideProps: GetServerSideProps<{
   serverData: ServerData;
 }> = async () => {
-  const res = await fetch('http://localhost:3000/message-from-db');
-  const serverData = await res.json();
-  return { props: { serverData } };
+  const result = await apiGetMessage();
+  return { props: { serverData: result } };
 };
