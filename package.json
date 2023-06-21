@@ -1,0 +1,14 @@
+{
+  "name": "garbon",
+  "version": "0.0.1",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "19.1.0"
+  },
+  "scripts": {
+    "install": "npm install --prefix backend/",
+    "build": "npm run build --prefix backend/",
+    "start": "npm run start:prod --prefix backend/"
+  }
+}
